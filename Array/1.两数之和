@@ -1,0 +1,16 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int i,j;
+        for (int i = 0;i<nums.size()-1; i++) {
+            for (int j = i+1;j<nums.size();j++) {
+                if (nums[i] + nums[j] == target) {
+                    return {i,j};
+                }
+            }
+        }
+        return {i,j};
+    }
+};
+
+//这道题还有一种哈希表的解法，但是没学，暂时不管，直接利用两种循环暴力求解，时间复杂度O(n2);
